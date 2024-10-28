@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
+""" Uses index_range to paginate through dataset """
 import csv
 import math
 from typing import List
-""" Uses index_range to paginate through dataset """
 
 
 def index_range(page: int, page_size: int) -> tuple:
