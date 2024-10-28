@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Uses index_range to paginate through dataset """
+""" Hypermedia pagination """
 import csv
 from typing import List
 
@@ -46,3 +46,19 @@ class Server:
         dataset = self.dataset()
 
         return dataset[start_index:end_index]
+
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+        """Returns a dictionary containing the requested page of the dataset
+        along with pagination metadata
+        """
+        data = self.get_page(page, page_size)
+        total_pages = len(self.dataset()) // page_size + \
+            (len(self.dataset()) % page_size > 0)
+        return {
+            "page": page,
+            "page_size": page_size,
+            "data": data,
+            "next_page": page + 1 if page < total_pages else None,
+            "prev_page": page - 1 if page > 1 else None,
+            "total_pages": total_pages
+        }
