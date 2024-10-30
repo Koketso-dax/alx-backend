@@ -14,10 +14,10 @@ class LIFOCache(BaseCaching):
         """ Init superclass """
         super().__init__()
         self.order = OrderedDict()
-    
+
     def put(self, key, item):
         """ inserts item at key and deletes last inserted
-        record if Max is reached. 
+        record if Max is reached.
         """
         if key is None or item is None:
             return

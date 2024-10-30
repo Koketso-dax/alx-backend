@@ -10,7 +10,7 @@ class BasicCache(BaseCaching):
 
     def __init__(self):
         super().__init__()
-        del self.MAX_ITEMS
+        self.MAX_ITEMS = None
 
     def put(self, key, item):
         """ Add an item in the cache
