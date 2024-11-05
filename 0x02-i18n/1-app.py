@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """ Basic Flask route """
 from flask import Flask, render_template
 from flask_babel import Babel
@@ -18,6 +18,7 @@ babel = Babel(app)
 
 @app.route('/')
 def home():
+    """Welcome route"""
     return render_template("templates/1-index.html")
 
 
