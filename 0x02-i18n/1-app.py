@@ -16,8 +16,8 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-@app.route('/')
-def home():
+@app.route('/', methods=['GET'], strict_slashes=False)
+def index():
     """Welcome route"""
     return render_template("templates/1-index.html")
 
