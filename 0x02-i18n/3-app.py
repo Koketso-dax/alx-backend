@@ -5,7 +5,7 @@ from flask_babel import Babel, gettext
 
 
 class Config:
-    """ config class """
+    """ flask config class """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
@@ -16,7 +16,6 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-@app.before_request
 @babel.localeselector
 def get_locale():
     """ determine the best match with our supported languages """
@@ -25,7 +24,7 @@ def get_locale():
 
 @app.route('/', methods=['GET'], strict_slashes=False)
 def index():
-    """ index page """
+    """ index page route (3-index) """
     return render_template('3-index.html', home_title=gettext("home_title"),
                            home_header=gettext("home_header"))
 
