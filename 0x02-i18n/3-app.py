@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""parameterized templates"""
+""" parameterized templates & routes """
 from flask import Flask, render_template, request
 from flask_babel import Babel, gettext
 
@@ -24,7 +24,7 @@ def get_locale():
 
 @app.route('/', methods=['GET'], strict_slashes=False)
 def index():
-    """ index page route (3-index) """
+    """ index page route with parameterized fields """
     return render_template('3-index.html', home_title=gettext("home_title"),
                            home_header=gettext("home_header"))
 
