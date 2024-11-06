@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Basic Babel setup with mock login"""
+""" Basic Babel setup with mock login """
 from flask import Flask, render_template, request, g
 from flask_babel import Babel, gettext
 
@@ -13,6 +13,7 @@ class Config:
 app = Flask(__name__)
 app.config.from_object(Config)
 babel = Babel(app)
+gettext.__doc__ = """ Dynamically assigns texts to html elements"""
 
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},

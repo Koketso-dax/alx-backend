@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Use user locale
-"""
+""" Use user locale to determine correct text. """
 from flask import Flask, render_template, g, request
 from flask_babel import Babel
 
@@ -17,6 +16,7 @@ app = Flask(__name__)
 app.config.from_object(Config)
 app.url_map.strict_slashes = False
 babel = Babel(app)
+
 
 
 users = {
@@ -53,8 +53,7 @@ def get_locale():
 
 
 def get_user():
-    """Get user by ID
-    """
+    """ Get user by ID """
     login_id = request.args.get('login_as')
 
     if login_id:
@@ -71,8 +70,7 @@ def before_request():
 
 @app.route('/')
 def login():
-    """Login user
-    """
+    """Login user"""
     return render_template('6-index.html')
 
 

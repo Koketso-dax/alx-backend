@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""A baisc flask app with i18n support
-"""
+""" A baisc flask app with i18n support """
 from flask import Flask, render_template, g, request
 from flask_babel import Babel
 from pytz import timezone, UnknownTimeZoneError
