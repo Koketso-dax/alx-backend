@@ -63,14 +63,13 @@ def get_user():
 
 @app.before_request
 def before_request():
-    """Run before any request
-    """
+    """ Run before any request """
     g.user = get_user()
 
 
 @app.route('/')
 def login():
-    """Login user"""
+    """ Mocks a user login """
     return render_template('6-index.html')
 
 
