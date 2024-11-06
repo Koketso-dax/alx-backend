@@ -41,3 +41,6 @@ msgstr "You are logged in as %(username)s."
 #: 5-app.py:18
 msgid "not_logged_in"
 msgstr "You are not logged in."
+
+msgid "current_time_is"
+msgstr "The current time is %(current_time)s."

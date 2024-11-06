@@ -27,17 +27,12 @@ msgid "home_header"
 msgstr "Bonjour monde!"
 
 #: 5-app.py:18
-msgid "home_title"
-msgstr "Bienvenue chez Holberton"
-
-#: 5-app.py:18
-msgid "home_header"
-msgstr "Bonjour monde!"
-
-#: 5-app.py:18
 msgid "logged_in_as"
 msgstr "Vous êtes connecté en tant que %(username)s."
 
 #: 5-app.py:18
 msgid "not_logged_in"
 msgstr "Vous n'êtes pas connecté."
+
+msgid "current_time_is"
+msgstr "Nous sommes le %(current_time)s."
